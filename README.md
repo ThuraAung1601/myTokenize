@@ -97,7 +97,7 @@ print(sentences)  # [['ညာ', 'ဘက်', 'ကို', 'ယူ', 'ပြီ�
 
 ## Dependencies
 
-- Python 3.7+
+- Python 3.8+
 - TensorFlow
 - SentencePiece
 - pycrfsuite

@@ -111,3 +111,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 - **Ye Kyaw Thu** 
 - **Thura Aung**
+
+## References
+- myWord: Syllable, Word and Phrase Segmenter for Burmese, Ye Kyaw Thu, Sept 2021, GitHub Link: https://github.com/ye-kyaw-thu/myWord
+- sylbreak: Syllable segmentation tool for Myanmar language (Burmese), Ye Kyaw Thu, GitHub Link: https://github.com/ye-kyaw-thu/sylbreak
+- mySentence: Corpus and Models for Burmese (Myanmar language) Sentence Tokenization, GitHub Link: https://github.com/ye-kyaw-thu/mySentence

@@ -26,7 +26,7 @@ setup(
     },
     install_requires=[
         "numpy",
-        "tensorflow==2.13",
+        "tensorflow==2.15",
         "python-crfsuite",
         "sentencepiece",
         "matplotlib",

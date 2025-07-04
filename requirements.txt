@@ -1,8 +1,13 @@
-numpy
+# Core dependencies
+numpy==1.24.3
 python-crfsuite==0.9.9
-tensorflow==2.13.0
-tensorflow-addons==0.21.0
-tensorflow-estimator==2.13.0
 sentencepiece==0.2.0
-matplotlib==3.7.4
 GitPython==3.1.41
+
+# TensorFlow + compatible addons
+tensorflow==2.13.0
+tensorflow-estimator==2.13.0
+tensorflow-addons==0.21.0
+
+# Optional for plotting or visualization
+matplotlib==3.7.4

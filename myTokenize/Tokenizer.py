@@ -271,7 +271,6 @@ class SentenceTokenizer:
 # -------------------------------------------------------------------------------------
 __all__ = [
     "SyllableTokenizer",
-    "ICUGraphemeTokenizer",
     "WordTokenizer",
     "PhraseTokenizer",
     "SentenceTokenizer",

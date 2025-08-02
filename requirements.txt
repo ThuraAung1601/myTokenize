@@ -2,10 +2,10 @@
 numpy==1.25
 python-crfsuite==0.9.9
 sentencepiece==0.2.0
-GitPython==3.1.41
+cached_path==1.5.0
 
 # TensorFlow + compatible addons
-tensorflow==2.15.0
+tensorflow==2.13.0
 tensorflow-estimator==2.15.0
 tensorflow-addons==0.21.0
 

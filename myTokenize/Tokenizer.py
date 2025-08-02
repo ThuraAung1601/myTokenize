@@ -1,12 +1,12 @@
 from __future__ import annotations
 
 """
-Tokenizer module for Myanmar (Burmese) NLP.
+Tokenizer library for Myanmar (Burmese) NLP.
 
 Usage example
 -------------
->>> from myNLP.tokenize import Tokenizer
->>> tk = Tokenizer.WordTokenizer(engine="LSTM")
+>>> from myTokenize import WordTokenizer
+>>> tk = WordTokenizer(engine="LSTM")
 >>> tk.tokenize("မြန်မာနိုင်ငံ")
 ['မြန်မာ', 'နိုင်ငံ']
 """

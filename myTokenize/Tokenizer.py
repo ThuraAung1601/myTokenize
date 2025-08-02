@@ -17,7 +17,6 @@ import re
 from pathlib import Path
 from typing import List, Tuple
 
-import icu
 import numpy as np
 import pycrfsuite
 from cached_path import cached_path
@@ -69,33 +68,6 @@ class SyllableTokenizer:
         """Return a list of syllables for *raw_text*."""
         lined_text = re.sub(self._break_pattern, r" \1", raw_text)
         return lined_text.split()
-
-
-# -------------------------------------------------------------------------------------
-class ICUGraphemeTokenizer:
-    """
-    ICU based Grapheme Segmenter for multiple languages.
-    :Example:
-    from myNLP.tokenize import Tokenizer
-    tokenizer = Tokenizer.ICUGraphemeTokenizer()
-    graphemes = tokenizer.tokenize("မြန်မာနိုင်ငံ")
-    print(graphemes)
-    # ['မြ', 'န်', 'မ', 'ာ', 'နို', 'င်', 'ငံ', '။']
-    """
-
-    def __init__(self, locale: str = "my_MM") -> None:
-        self._locale = locale
-
-    # ------------------------------------------------------------------
-    def tokenize(self, raw_text: str) -> List[str]:
-        boundary = icu.BreakIterator.createCharacterInstance(icu.Locale(self._locale))
-        boundary.setText(raw_text)
-        start = boundary.first()
-        graphemes: List[str] = []
-        for end in boundary:
-            graphemes.append(raw_text[start:end])
-            start = end
-        return graphemes
 
 
 # -------------------------------------------------------------------------------------

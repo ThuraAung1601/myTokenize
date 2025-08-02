@@ -5,7 +5,6 @@
 ## Features
 
 - **Syllable Tokenization**: Break text into syllables using regex rules.
-- **BPE and Unigram Tokenization**: Leverage SentencePiece models for tokenization.
 - **Word Tokenization**: Segment text into words using:
   - `myWord`: Dictionary-based tokenization.
   - `CRF`: Conditional Random Fields-based tokenization.
@@ -42,15 +41,6 @@ syllables = tokenizer.tokenize("မြန်မာနိုင်ငံ။")
 print(syllables)  # ['မြန်', 'မာ', 'နိုင်', 'ငံ', '။']
 ```
 
-### BPE Tokenizer
-```python
-from myTokenize import BPETokenizer
-
-tokenizer = BPETokenizer()
-tokens = tokenizer.tokenize("ရွေးကောက်ပွဲမှာနိုင်ထားတဲ့ဒေါ်နယ်ထရမ့်")
-print(tokens)  # ['▁ရွေးကောက်ပွဲ', 'မှာ', 'နိုင်', 'ထား', 'တဲ့', 'ဒေါ်', 'နယ်', 'ထ', 'ရ', 'မ့်']
-```
-
 ### Word Tokenizer
 ```python
 from myTokenize import WordTokenizer
@@ -84,11 +74,6 @@ print(sentences)  # [['ညာ', 'ဘက်', 'ကို', 'ယူ', 'ပြီ�
 ./myTokenize/
 ├── CRFTokenizer
 │   └── wordseg_c2_crf.crfsuite
-├── SentencePiece
-│   ├── bpe_sentencepiece_model.model
-│   ├── bpe_sentencepiece_model.vocab
-│   ├── unigram_sentencepiece_model.model
-│   └── unigram_sentencepiece_model.vocab
 ├── Tokenizer.py
 └── myWord
     ├── phrase_segment.py
@@ -97,11 +82,12 @@ print(sentences)  # [['ညာ', 'ဘက်', 'ကို', 'ယူ', 'ပြီ�
 
 ## Dependencies
 
-- Python 3.8+
-- TensorFlow
+- Python 3.8
+- TensorFlow 2.13
 - SentencePiece
 - pycrfsuite
 - Numpy
+- cached_path 1.5.0 
 
 ## License
 
